@@ -1,30 +1,32 @@
+<div class="groups-container">
 <% if current_user %>
 <%= button_to 'Log out', destroy_user_session_path, method: :delete, class: "log-out" %>
-  <div class="container-fluid d-flex flex-column align-items-center">
+  <div class="groups-container-grid">
     <% unless @groups.empty? %>
       <% @groups.each do |group| %>
-        <div class="card d-flex flex-column mt-2 mb-1" style="width: 95%;">
-          <div class="card-body d-flex flex-row align-items-center">
+        <div class="single-group-container">
+          <div class="single-group-container-flex">
             <div class="group-image">
-              <img src=<%= group.icon %> class="group-icon me-2" alt="group icon">
+              <img src=<%= group.icon %> alt="group icon">
             </div>
-            <div class="w-75 d-flex justify-content-between align-items-center">
-              <div class="d-flex flex-column">
-                <%= link_to "#{group.name}", group_path(group), class:"card-title group-name fs-5 stretched-link" %>
-                <p class="card-text mt-2"><small class="text-muted"><%=group.created_at.strftime("%d %b %Y")%></small></p>
+            <div class="group-info-container">
+              <div class="title-date-container">
+                <%= link_to "#{group.name}", group_path(group), class:"group-title" %>
+                <p><%=group.created_at.strftime("%d %b %Y")%></p>
               </div> 
-              <p class="card-text fw-semibold"> $ <%= group.entities.sum(:amount) %></p>
+              <p class="group-entity"> $ <%= group.entities.sum(:amount) %></p>
             </div>
           </div>  
         </div>  
       <% end %>
     <% else %>
-      <h3 class="mt-4">You don't have any categories yet.</h3>
-    <% end %>    
+      <h3 class="no-category">You don't have any categories yet.</h3>
+    <% end %>
   </div>
-  <div class="d-flex justify-content-center my-2 add-new-group-button"> 
-    <%= link_to 'Add a new Group', new_group_path, class: "scan-button mx-2" %>
+  <div class="add-group-container"> 
+    <h5><%= link_to 'ADD A NEW GROUP', new_group_path, class: "add-group-btn" %></h5>
   </div>
 <% else %>
   <%= render partial: "shared/splash" %>
 <% end %>
+</div>
