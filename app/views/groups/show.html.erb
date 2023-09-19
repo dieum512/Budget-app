@@ -1,0 +1,39 @@
+<div class="container-fluid primary-color text-white text-center mb-2 py-2 d-flex align-items-center">
+  <a href="<%= groups_path %>">
+    <svg width="30px" height="30px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff" transform="rotate(0)matrix(1, 0, 0, -1, 0, 0)">
+      <!-- ... SVG code ... -->
+    </svg>
+  </a>
+  <h2 class="text-center flex-grow-1">Groups</h2>
+</div>
+
+<div class="container-fluid d-flex flex-column align-items-center">
+  <div class="card" style="width: 95%;">
+    <div class="card-header">
+      <div class="d-flex align-items-center">
+        <img src=<%= @group.icon %> class="group-icon me-4" alt="group icon">
+        <h5 class="card-title group-name fs-5 stretched-link"><%=@group.name%>'s transactions</h5>
+      </div>
+    </div>
+    <ul>
+      <% unless @entities.empty? %>
+        <% @entities.each_with_index do |expense, index| %>
+          <li class="list-group-item">
+            <div class="d-flex flex-row transactions-area">
+              <div>
+                <p class="card-text gray-text">Transaction <%=index + 1%>: <span class="fw-semibold ms-2"><%=expense.name%></span></p>
+                <p class="card-text mt-2"><small class="text-muted"><i class="fa-regular fa-calendar me-2"></i><%=expense.created_at.strftime("%d %b %Y")%> at <%=expense.created_at.strftime("%I.%M %p")%></small></p>
+              </div>
+              <div class="ms-auto">
+                <p class="card-text gray-text">Amount: <span class="fw-semibold ms-2">$<%=expense.amount%></span></p>
+              </div>
+            </div>
+          </li>
+        <% end %>
+      <% else %>
+        <li class="list-group-item gray-text">You don't have transactions here yet.</li>
+      <% end %>
+    </ul>
+  </div>
+  <%= link_to 'Scan', new_entity_path, class: "scan-button" %>
+</div>
