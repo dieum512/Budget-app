@@ -1,15 +1,83 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;1,300&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+}
+
+/* groups index */
+.groups-container {
+    background: #f0f2f1;
+}
+
+.groups-container-grid {
+    padding: 3% 5%;
+    display: grid;
+    gap: 15px;
+}
+
+.single-group-container {
+    width: 100%;
+    background: #fff;
+    /* display: flex; */
+    padding: 10px;
+}
+
+.single-group-container-flex {
+    display: flex;
+    gap: 10px;
+}
+
+.group-image {
+    width: 40%;
+}
+
+.group-image img {
+    width: 100%;
+    border-radius: 3px;
+}
+
+.group-info-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.group-info-container .group-title {
+    font-size: 18px;
+    font-weight: 500;
+    color: #86898e;
+}
+
+.title-date-container p {
+    padding-top: 15px;
+    color: #989da3;
+}
+
+.group-entity {
+    color: #424b54;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.add-group-container {
+    background: #60b524;
+    padding: 20px;
+}
+
+.add-group-container h5 {
+    width: 100%;
+    text-align: center;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.add-group-container h5 .add-group-btn {
+    color: #fff;
+}
