@@ -21,9 +21,8 @@
       <%= form.number_field :amount, class:"form-control", id:"floatingInput", placeholder:"Transaction amount", required: true %>
       <%= form.label :amount, 'Amount', class: "form-label" %>
     </div>
-    <%= form.label :group_id, 'Please select an entity (ctrl+click for multiple selection):', class: "form-label" %>
-    <br/>
-    <%= form.select :group_id, Entity.order(:name).where(user:current_user).pluck(:name, :id), {}, {:multiple => true, required:true, :id => "groups", :class => "form-select mb-3" } %>
+    <%= form.label :group_id, 'Please select a category (ctrl+click for multiple selection):', class: "form-label" %>
+    <%= form.select :group_id, Group.order(:name).where(user:current_user).pluck(:name, :id), {}, {:multiple => true, required:true, :id => "groups", :class => "form-select mb-3" } %>
     <%= form.submit 'Create transaction', class: "btn green btn-outline-info text-white" %>
   <% end %>
 </div>
