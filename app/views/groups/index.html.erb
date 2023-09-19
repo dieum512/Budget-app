@@ -1,4 +1,5 @@
 <% if current_user %>
+<%= button_to 'Log out', destroy_user_session_path, method: :delete, class: "log-out" %>
   <div class="container-fluid d-flex flex-column align-items-center">
     <% unless @groups.empty? %>
       <% @groups.each do |group| %>
@@ -25,5 +26,5 @@
     <%= link_to 'Add a new Group', new_group_path, class: "scan-button mx-2" %>
   </div>
 <% else %>
-  <%= render partial: "shared/background" %>
+  <%= render partial: "shared/splash" %>
 <% end %>
