@@ -217,3 +217,50 @@
     text-transform: uppercase;
     font-weight: bold;
 }
+
+/* log in */
+.login-header {
+    background: #3778c2;
+    padding: 10px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.login-header i {
+    font-size: 28px;
+    color: #fff
+}
+
+.login-header h2 {
+    font-size: 28px;
+    color: #fff;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.login-header .log-in-btn-2 {
+    border: none;
+    background: transparent;
+    color: #fff;
+    font-size: 18px;
+}
+
+.field-cont {
+    background: #f0f2f1;
+    padding: 5% 0;
+    height: 100vh;
+}
+
+.field {
+    width: 100%;
+}
+
+.field .input {
+    width: 100%;
+    padding: 13px;
+    background: #fff;
+    font-size: 16px;
+    border: none;
+    border-bottom: 2px solid #f0f2f1;
+}
