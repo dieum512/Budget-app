@@ -29,6 +29,10 @@
     padding: 10px;
 }
 
+.single-group-container:last-child {
+    margin-bottom: 100px;
+}
+
 .single-group-container-flex {
     display: flex;
     gap: 10px;
@@ -70,6 +74,10 @@
 .add-group-container {
     background: #60b524;
     padding: 20px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
 .add-group-container h5 {
