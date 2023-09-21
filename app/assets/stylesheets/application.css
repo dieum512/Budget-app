@@ -103,7 +103,7 @@
 .create-group-nav h2 {
     width: 100%;
     text-align: center;
-    font-size: 28px;
+    font-size: 25px;
     color: #fff;
     font-weight: 500;
 }
@@ -298,11 +298,30 @@
 /* forms */
 .create-btn {
     border: none;
-    background: #3778c2;
+    background: #60b524;
     color: #fff;
     padding: 10px 25px;
     margin-top: 20px;
-    margin-right: 5%;
     float: right;
+    font-size: 16px;
+}
+
+.create-btn.create {
+    margin-right: 5%;
+}
+
+/* new trransaction form */
+.transaction-form-cont {
+    padding: 5%;
+}
+
+.input-cont {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.form-input {
+    width: 100%;
+    padding: 10px;
     font-size: 16px;
 }
