@@ -84,20 +84,23 @@
     color: #fff;
 }
 
-/* group show */
-.title-cont {
+/* group show & crate group*/
+.title-cont,
+.create-group-nav {
     background: #3778c2;
     padding: 10px;
     display: flex;
     align-items: center;
 }
 
-.title-cont a i {
+.title-cont a i,
+.create-group-nav a i {
     font-size: 28px;
     color: #fff
 }
 
-.title-cont h2 {
+.title-cont h2,
+.create-group-nav h2 {
     width: 100%;
     text-align: center;
     font-size: 28px;
@@ -290,4 +293,16 @@
     background: transparent;
     color: #fff;
     font-size: 18px;
+}
+
+/* forms */
+.create-btn {
+    border: none;
+    background: #3778c2;
+    color: #fff;
+    padding: 10px 25px;
+    margin-top: 20px;
+    margin-right: 5%;
+    float: right;
+    font-size: 16px;
 }
