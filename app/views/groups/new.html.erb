@@ -1,25 +1,19 @@
-<div class="container-fluid primary-color text-white text-center mb-2 py-2 d-flex align-items-center">
-<a href="<%= groups_path %>">
-  <svg width="30px" height="30px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff" transform="rotate(0)matrix(1, 0, 0, -1, 0, 0)">
-    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#ffffff" stroke-width="0.048"></g>
-    <g id="SVGRepo_iconCarrier">
-      <path d="M4 12H20M4 12L8 8M4 12L8 16" stroke="#ffffff" stroke-width="1.44" stroke-linecap="round" stroke-linejoin="round"></path>
-    </g>
-  </svg>
+<div class="create-group-nav">
+  <a href="<%= groups_path %>">
+    <i class="fa-solid fa-arrow-left"></i>
   </a>
   <h2 class="text-center flex-grow-1">Create a new group</h2>
 </div>
 <div class="container-fluid w-100 d-flex flex-column align-items-center mt-5">
   <%= form_with model: @group, url: groups_path, method: :post, :html => {:class => "w-75 mt-4"} do |form| %>
-    <div class="form-floating mb-3 w-100 d-flex flex-column align-items-center mt-5">
-      <%= form.text_field :name, class:"form-control", id:"floatingInput", placeholder:"group name" %>
-      <%= form.label :name, 'Name', class: "form-label" %>
+  <div class="field-cont">
+    <div class="field">
+      <%= form.text_field :name, class:"input", id:"floatingInput", placeholder:"Name" %>
     </div>
-    <div class="form-floating mb-3 w-100 d-flex flex-column align-items-center mt-5">
-      <%= form.text_field :icon, class:"form-control", id:"floatingInput", placeholder:"group icon"  %>
-      <%= form.label :icon, 'Icon link', class: "form-label" %>
+    <div class="field">
+      <%= form.text_field :icon, class:"input", id:"floatingInput", placeholder:"Icon link"  %>
     </div>
-     <%= form.submit 'Create group', class: "btn green btn-outline-info text-white" %>
+     <%= form.submit 'Create group', class: "create-btn" %>
+  </div>
   <% end %>
 </div>
