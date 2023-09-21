@@ -1,6 +1,6 @@
-<div class="groups-container">
 <% if current_user %>
-<%= button_to 'Log out', destroy_user_session_path, method: :delete, class: "log-out" %>
+<%= render partial: "shared/nav" %>
+<div class="groups-container">
   <div class="groups-container-grid">
     <% unless @groups.empty? %>
       <% @groups.each do |group| %>
