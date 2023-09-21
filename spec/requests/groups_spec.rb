@@ -36,6 +36,10 @@ RSpec.describe 'GroupsController', type: :request do
         it 'Displays the new' do
             expect(response).to render_template(:new)
         end
+
+        it 'Returns the body holder' do
+            expect(response.body).to include('Create a new group')
+        end
     end
 
     describe 'GET /groups/:id' do
