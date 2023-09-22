@@ -6,6 +6,8 @@
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
+    - [🚀 Live Demo](#live-demo)
+    - [🚀 Live Video](#live-video)
 - [💻 Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Setup](#setup)
@@ -68,6 +70,24 @@
 - **Analyze in writing why you have made a coding choice using one structure over another.**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- LIVE DEMO -->
+
+## 🚀 Live Demo <a name="live-demo"></a>
+
+- [Live Demo Link](https://budgett-3abs.onrender.com/)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- LIVE VIDEO -->
+
+## 🚀 Live Video <a name="live-video"></a>
+
+<!-- - [Live Video Link](https://www.loom.com/share/2499ad7e695845028f1596986f918bb7) -->
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- GETTING STARTED -->
 
 <!-- GETTING STARTED -->
 
