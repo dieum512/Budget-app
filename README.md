@@ -101,9 +101,9 @@ PostgreSQL
 
 ### Setup
 
-$ git clone git@github.com:dieum512/Blogg-app-2.git
+$ git clone git@github.com:dieum512/Budget-app.git
 
-$ cd Blogg-app-2
+$ cd Budget-app
 
 ### Setup
 
