@@ -147,7 +147,7 @@ Example command:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **Develop the computer version of the app**
+- [ ] **Develop the desktop version of the app**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
