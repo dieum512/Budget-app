@@ -83,7 +83,7 @@
 
 ## 🚀 Live Video <a name="live-video"></a>
 
-<!-- - [Live Video Link](https://www.loom.com/share/2499ad7e695845028f1596986f918bb7) -->
+- [Live Video Link](https://www.loom.com/share/2499ad7e695845028f1596986f918bb7)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
