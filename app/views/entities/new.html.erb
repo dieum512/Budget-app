@@ -6,7 +6,7 @@
 </div>
 
 <div class="transaction-form-cont">
-  <%= form_with model: @entity, url: entities_path, method: :post, :html => {:class => "w-75 mt-4"} do |form| %>
+  <%= form_with model: @entity, url: group_entities_path, method: :post, :html => {:class => "w-75 mt-4"} do |form| %>
 
     <div class="input-cont">
       <%= form.text_field :name, class:"form-input", id:"floatingInput", placeholder:"Name", required: true %>
