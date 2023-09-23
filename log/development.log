@@ -13901,3 +13901,83 @@ Processing by GroupsController#index as TURBO_STREAM
 Completed 200 OK in 33ms (Views: 25.8ms | ActiveRecord: 3.4ms | Allocations: 13062)
 
 
+Started GET "/groups" for 127.0.0.1 at 2023-09-23 20:39:58 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (376.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GroupsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering groups/index.html.erb within layouts/application
+  Rendered shared/_splash.html.erb (Duration: 0.9ms | Allocations: 400)
+  Rendered groups/index.html.erb within layouts/application (Duration: 13.9ms | Allocations: 1413)
+  Rendered layout layouts/application.html.erb (Duration: 578.5ms | Allocations: 39880)
+Completed 200 OK in 795ms (Views: 583.2ms | ActiveRecord: 0.0ms | Allocations: 49659)
+
+
+Started GET "/groups" for 127.0.0.1 at 2023-09-23 20:42:29 +0200
+Processing by GroupsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering groups/index.html.erb within layouts/application
+  Rendered shared/_splash.html.erb (Duration: 1.2ms | Allocations: 129)
+  Rendered groups/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 220)
+  Rendered layout layouts/application.html.erb (Duration: 12.1ms | Allocations: 2771)
+Completed 200 OK in 19ms (Views: 17.1ms | ActiveRecord: 0.0ms | Allocations: 3451)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-09-23 20:42:32 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 99.6ms | Allocations: 2507)
+  Rendered layout layouts/application.html.erb (Duration: 102.6ms | Allocations: 5126)
+Completed 200 OK in 421ms (Views: 104.8ms | ActiveRecord: 224.6ms | Allocations: 24782)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2023-09-23 20:42:36 +0200
+Processing by Devise::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"akonkwadieum222@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (115.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "akonkwadieum222@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 573ms (ActiveRecord: 115.7ms | Allocations: 5285)
+
+
+Processing by Devise::SessionsController#new as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"akonkwadieum222@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 639)
+  Rendered layout layouts/application.html.erb (Duration: 7.6ms | Allocations: 3138)
+Completed 200 OK in 344ms (Views: 8.5ms | ActiveRecord: 0.0ms | Allocations: 3920)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2023-09-23 20:42:56 +0200
+Processing by Devise::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"akonkwadieum222@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "akonkwadieum222@gmail.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 303 See Other in 373ms (ActiveRecord: 0.8ms | Allocations: 3835)
+
+
+Started GET "/" for 127.0.0.1 at 2023-09-23 20:42:56 +0200
+Processing by GroupsController#index as TURBO_STREAM
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:5:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering groups/index.html.erb within layouts/application
+  Rendered shared/_nav.html.erb (Duration: 16.1ms | Allocations: 504)
+  [1m[36mGroup Exists? (54.3ms)[0m  [1m[34mSELECT 1 AS one FROM "groups" WHERE "groups"."author_id" = $1 LIMIT $2[0m  [["author_id", 1], ["LIMIT", 1]]
+  ↳ app/views/groups/index.html.erb:5
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."author_id" = $1[0m  [["author_id", 1]]
+  ↳ app/views/groups/index.html.erb:6
+  [1m[36mEntity Load (69.4ms)[0m  [1m[34mSELECT "entities".* FROM "entities" WHERE "entities"."group_id" IN ($1, $2, $3, $4)[0m  [["group_id", 1], ["group_id", 2], ["group_id", 3], ["group_id", 4]]
+  ↳ app/views/groups/index.html.erb:6
+  [1m[36mEntity Sum (0.5ms)[0m  [1m[34mSELECT SUM("entities"."amount") FROM "entities" WHERE "entities"."group_id" = $1[0m  [["group_id", 1]]
+  ↳ app/views/groups/index.html.erb:17
+  [1m[36mEntity Sum (0.4ms)[0m  [1m[34mSELECT SUM("entities"."amount") FROM "entities" WHERE "entities"."group_id" = $1[0m  [["group_id", 2]]
+  ↳ app/views/groups/index.html.erb:17
+  [1m[36mEntity Sum (1.5ms)[0m  [1m[34mSELECT SUM("entities"."amount") FROM "entities" WHERE "entities"."group_id" = $1[0m  [["group_id", 3]]
+  ↳ app/views/groups/index.html.erb:17
+  [1m[36mEntity Sum (0.7ms)[0m  [1m[34mSELECT SUM("entities"."amount") FROM "entities" WHERE "entities"."group_id" = $1[0m  [["group_id", 4]]
+  ↳ app/views/groups/index.html.erb:17
+  Rendered groups/index.html.erb within layouts/application (Duration: 338.5ms | Allocations: 41962)
+  Rendered layout layouts/application.html.erb (Duration: 345.4ms | Allocations: 44512)
+Completed 200 OK in 480ms (Views: 213.6ms | ActiveRecord: 135.2ms | Allocations: 54147)
+
+

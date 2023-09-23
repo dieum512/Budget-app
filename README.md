@@ -83,7 +83,7 @@
 
 ## 🚀 Live Video <a name="live-video"></a>
 
-- [Live Video Link](https://drive.google.com/file/d/1Bz207uE94ipB6YXCPpy6EODpYJS6Innq/view?usp=drive_link)
+- [Live Video Link](https://drive.google.com/file/d/1Bz207uE94ipB6YXCPpy6EODpYJS6Innq/view?usp=sharing)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
