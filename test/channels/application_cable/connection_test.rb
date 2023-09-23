@@ -6,6 +6,6 @@ class ApplicationCable::ConnectionTest < ActionCable::Connection::TestCase
   #
   #   connect
   #
-  #   assert_equal connection.user_id, "42"
+  #   assert_equal connectionauthor_id, "42"
   # end
 end

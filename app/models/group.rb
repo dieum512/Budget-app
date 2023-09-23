@@ -1,5 +1,5 @@
 class Group < ApplicationRecord
-  belongs_to :user
+  belongs_to :author, class_name: 'User'
   has_many :entities
 
   validates :name, :icon, presence: true

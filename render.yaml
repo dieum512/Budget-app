@@ -1,7 +1,7 @@
 databases:
   - name: budgetapp
     databaseName: budgetapp_occn
-    user: budgetapp_occn_user
+    author: budgetapp_occn_user
 
 services:
   - type: web

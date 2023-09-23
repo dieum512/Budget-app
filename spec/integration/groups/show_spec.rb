@@ -3,11 +3,11 @@ require 'rails_helper'
 RSpec.describe 'Groups #Show page', type: :feature do
   before(:each) do
     @user = User.create(name: 'atril', email: 'test@gmail.com', password: 'test123')
-    @group = Group.create(name: 'my group 1st', icon: 'www.myicon/path/icon.png', user: @user)
+    @group = Group.create(name: 'my group 1st', icon: 'www.myicon/path/icon.png', author: @user)
     @entity1 = Entity.create(name: 'my cash tracker 1st', amount: 1003.20, group_id: @group.id,
-                             user_id: @user.id)
+                             author_id: @user.id)
     @entity2 = Entity.create(name: 'my cash tracker 2nd', amount: 100.20, group_id: @group.id,
-                             user_id: @user.id)
+                             author_id: @user.id)
 
     visit new_user_session_path
     fill_in 'user[email]', with: @user.email
