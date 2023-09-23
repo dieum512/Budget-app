@@ -13,6 +13,16 @@
     <div class="field">
       <%= form.text_field :icon, class:"input", placeholder:"Icon link" %>
     </div>
+
+    <% if @group.errors.any? %>
+        <div class="alert alert-danger">
+          <% @group.errors.full_messages.each do |message| %>
+            <span><%= message %></span>
+          <% end %>
+        </div>
+      <% end %>
+    
+      <p class="notice"><%= alert %></p>
      <%= form.submit 'Create group', class: "create-btn create" %>
   </div>
   <% end %>
