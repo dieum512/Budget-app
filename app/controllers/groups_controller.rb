@@ -24,6 +24,7 @@ class GroupsController < ApplicationController
     if @group.save
       redirect_to groups_path
     else
+      flash[:alert] = "Group was not created. Please check the form and try again."
       render :new
     end
   end

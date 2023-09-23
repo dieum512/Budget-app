@@ -13981,3 +13981,1806 @@ Processing by GroupsController#index as TURBO_STREAM
 Completed 200 OK in 480ms (Views: 213.6ms | ActiveRecord: 135.2ms | Allocations: 54147)
 
 
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2023-09-23 20:47:19 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::SessionsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 303 See Other in 58ms (ActiveRecord: 5.1ms | Allocations: 27589)
+
+
+Started GET "/" for 127.0.0.1 at 2023-09-23 20:47:20 +0200
+Processing by GroupsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering groups/index.html.erb within layouts/application
+  Rendered shared/_splash.html.erb (Duration: 0.7ms | Allocations: 356)
+  Rendered groups/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1416)
+  Rendered layout layouts/application.html.erb (Duration: 57.8ms | Allocations: 39279)
+Completed 200 OK in 67ms (Views: 61.1ms | ActiveRecord: 0.0ms | Allocations: 43141)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-09-23 20:47:24 +0200
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 2.1ms | Allocations: 293)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 32.3ms | Allocations: 3334)
+  Rendered layout layouts/application.html.erb (Duration: 44.8ms | Allocations: 5953)
+Completed 200 OK in 49ms (Views: 47.1ms | ActiveRecord: 0.0ms | Allocations: 7627)
+
+
+Started POST "/users" for 127.0.0.1 at 2023-09-23 20:47:50 +0200
+Processing by Devise::RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"uuu", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 1.8ms | Allocations: 1202)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 5.3ms | Allocations: 3411)
+  Rendered layout layouts/application.html.erb (Duration: 9.0ms | Allocations: 6011)
+Completed 422 Unprocessable Entity in 332ms (Views: 10.0ms | ActiveRecord: 0.0ms | Allocations: 9346)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-09-23 20:53:27 +0200
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.9ms | Allocations: 249)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 5.9ms | Allocations: 1709)
+  Rendered layout layouts/application.html.erb (Duration: 13.4ms | Allocations: 4577)
+Completed 200 OK in 19ms (Views: 16.4ms | ActiveRecord: 0.0ms | Allocations: 6258)
+
+
+Started GET "/" for 127.0.0.1 at 2023-09-23 20:53:30 +0200
+Processing by GroupsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering groups/index.html.erb within layouts/application
+  Rendered shared/_splash.html.erb (Duration: 0.9ms | Allocations: 311)
+  Rendered groups/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 935)
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | Allocations: 3573)
+Completed 200 OK in 11ms (Views: 9.8ms | ActiveRecord: 0.0ms | Allocations: 4797)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-09-23 20:53:32 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1045)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 3645)
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.0ms | Allocations: 5037)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2023-09-23 20:53:34 +0200
+Processing by Devise::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"akonkwadieum222@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "akonkwadieum222@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 350ms (ActiveRecord: 6.8ms | Allocations: 4670)
+
+
+Processing by Devise::SessionsController#new as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"akonkwadieum222@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 0.9ms | Allocations: 560)
+  Rendered layout layouts/application.html.erb (Duration: 4.1ms | Allocations: 2966)
+Completed 200 OK in 318ms (Views: 4.9ms | ActiveRecord: 0.0ms | Allocations: 3602)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2023-09-23 20:53:47 +0200
+Processing by Devise::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"akonkwadieum222@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "akonkwadieum222@gmail.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 303 See Other in 328ms (ActiveRecord: 0.6ms | Allocations: 2624)
+
+
+Started GET "/" for 127.0.0.1 at 2023-09-23 20:53:48 +0200
+Processing by GroupsController#index as TURBO_STREAM
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:5:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering groups/index.html.erb within layouts/application
+  Rendered shared/_nav.html.erb (Duration: 1.0ms | Allocations: 415)
+  [1m[36mGroup Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "groups" WHERE "groups"."author_id" = $1 LIMIT $2[0m  [["author_id", 1], ["LIMIT", 1]]
+  ↳ app/views/groups/index.html.erb:5
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."author_id" = $1[0m  [["author_id", 1]]
+  ↳ app/views/groups/index.html.erb:6
+  [1m[36mEntity Load (0.8ms)[0m  [1m[34mSELECT "entities".* FROM "entities" WHERE "entities"."group_id" IN ($1, $2, $3, $4)[0m  [["group_id", 1], ["group_id", 2], ["group_id", 3], ["group_id", 4]]
+  ↳ app/views/groups/index.html.erb:6
+  [1m[36mEntity Sum (0.2ms)[0m  [1m[34mSELECT SUM("entities"."amount") FROM "entities" WHERE "entities"."group_id" = $1[0m  [["group_id", 1]]
+  ↳ app/views/groups/index.html.erb:17
+  [1m[36mEntity Sum (0.3ms)[0m  [1m[34mSELECT SUM("entities"."amount") FROM "entities" WHERE "entities"."group_id" = $1[0m  [["group_id", 2]]
+  ↳ app/views/groups/index.html.erb:17
+  [1m[36mEntity Sum (0.2ms)[0m  [1m[34mSELECT SUM("entities"."amount") FROM "entities" WHERE "entities"."group_id" = $1[0m  [["group_id", 3]]
+  ↳ app/views/groups/index.html.erb:17
+  [1m[36mEntity Sum (0.2ms)[0m  [1m[34mSELECT SUM("entities"."amount") FROM "entities" WHERE "entities"."group_id" = $1[0m  [["group_id", 4]]
+  ↳ app/views/groups/index.html.erb:17
+  Rendered groups/index.html.erb within layouts/application (Duration: 17.4ms | Allocations: 5680)
+  Rendered layout layouts/application.html.erb (Duration: 20.6ms | Allocations: 8091)
+Completed 200 OK in 25ms (Views: 18.9ms | ActiveRecord: 2.7ms | Allocations: 9488)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2023-09-23 20:53:51 +0200
+Processing by GroupsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 848)
+  Rendered layout layouts/application.html.erb (Duration: 7.0ms | Allocations: 3257)
+Completed 200 OK in 14ms (Views: 8.4ms | ActiveRecord: 0.3ms | Allocations: 4819)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2023-09-23 20:56:15 +0200
+Processing by GroupsController#new as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 2.6ms | Allocations: 981)
+  Rendered layout layouts/application.html.erb (Duration: 14.0ms | Allocations: 3867)
+Completed 200 OK in 28ms (Views: 16.3ms | ActiveRecord: 0.8ms | Allocations: 6253)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2023-09-23 20:57:53 +0200
+Processing by GroupsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1020)
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | Allocations: 3908)
+Completed 200 OK in 62ms (Views: 10.7ms | ActiveRecord: 9.1ms | Allocations: 31759)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-09-23 20:59:02 +0200
+Processing by GroupsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Furniures", "icon"=>"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeFrnA_Ou2ec5LLsGAKKIPOqaF1rmxhmTOOA&usqp=CAU"}, "commit"=>"Create group"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mGroup Create (350.6ms)[0m  [1m[32mINSERT INTO "groups" ("name", "icon", "author_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Furniures"], ["icon", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeFrnA_Ou2ec5LLsGAKKIPOqaF1rmxhmTOOA&usqp=CAU"], ["author_id", 1], ["created_at", "2023-09-23 18:59:02.775796"], ["updated_at", "2023-09-23 18:59:02.775796"]]
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (79.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+Redirected to http://localhost:3000/groups
+Completed 302 Found in 448ms (ActiveRecord: 430.3ms | Allocations: 6713)
+
+
+Started GET "/groups" for 127.0.0.1 at 2023-09-23 20:59:03 +0200
+Processing by GroupsController#index as TURBO_STREAM
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:5:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering groups/index.html.erb within layouts/application
+  Rendered shared/_nav.html.erb (Duration: 0.9ms | Allocations: 470)
+  [1m[36mGroup Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "groups" WHERE "groups"."author_id" = $1 LIMIT $2[0m  [["author_id", 1], ["LIMIT", 1]]
+  ↳ app/views/groups/index.html.erb:5
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."author_id" = $1[0m  [["author_id", 1]]
+  ↳ app/views/groups/index.html.erb:6
+  [1m[36mEntity Load (0.4ms)[0m  [1m[34mSELECT "entities".* FROM "entities" WHERE "entities"."group_id" IN ($1, $2, $3, $4, $5)[0m  [["group_id", 1], ["group_id", 2], ["group_id", 3], ["group_id", 4], ["group_id", 5]]
+  ↳ app/views/groups/index.html.erb:6
+  [1m[36mEntity Sum (0.3ms)[0m  [1m[34mSELECT SUM("entities"."amount") FROM "entities" WHERE "entities"."group_id" = $1[0m  [["group_id", 1]]
+  ↳ app/views/groups/index.html.erb:17
+  [1m[36mEntity Sum (0.3ms)[0m  [1m[34mSELECT SUM("entities"."amount") FROM "entities" WHERE "entities"."group_id" = $1[0m  [["group_id", 2]]
+  ↳ app/views/groups/index.html.erb:17
+  [1m[36mEntity Sum (0.2ms)[0m  [1m[34mSELECT SUM("entities"."amount") FROM "entities" WHERE "entities"."group_id" = $1[0m  [["group_id", 3]]
+  ↳ app/views/groups/index.html.erb:17
+  [1m[36mEntity Sum (0.2ms)[0m  [1m[34mSELECT SUM("entities"."amount") FROM "entities" WHERE "entities"."group_id" = $1[0m  [["group_id", 4]]
+  ↳ app/views/groups/index.html.erb:17
+  [1m[36mEntity Sum (0.2ms)[0m  [1m[34mSELECT SUM("entities"."amount") FROM "entities" WHERE "entities"."group_id" = $1[0m  [["group_id", 5]]
+  ↳ app/views/groups/index.html.erb:17
+  Rendered groups/index.html.erb within layouts/application (Duration: 17.8ms | Allocations: 7047)
+  Rendered layout layouts/application.html.erb (Duration: 24.7ms | Allocations: 9922)
+Completed 200 OK in 30ms (Views: 24.3ms | ActiveRecord: 2.6ms | Allocations: 12189)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2023-09-23 21:02:42 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GroupsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1763)
+  Rendered layout layouts/application.html.erb (Duration: 57.2ms | Allocations: 39964)
+Completed 200 OK in 120ms (Views: 59.7ms | ActiveRecord: 7.7ms | Allocations: 87920)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2023-09-23 21:14:49 +0200
+Processing by GroupsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 6.7ms | Allocations: 10171)
+
+
+  
+SyntaxError (/home/dieum/EVERYTING/WEB WORLD/MICROVERSE/PRACTICES/Module 5/Budget-app/app/models/group.rb:5: syntax error, unexpected '{', expecting `end'
+... :name, :icon, presence: true { message: "Icon link can't be...
+...                              ^
+/home/dieum/EVERYTING/WEB WORLD/MICROVERSE/PRACTICES/Module 5/Budget-app/app/models/group.rb:5: syntax error, unexpected '}', expecting `end'
+...e: "Icon link can't be blank" }
+...                              ^
+):
+  
+app/models/group.rb:5: syntax error, unexpected '{', expecting `end'
+app/models/group.rb:5: syntax error, unexpected '}', expecting `end'
+app/models/group.rb:5: syntax error, unexpected '{', expecting `end'
+app/models/group.rb:5: syntax error, unexpected '}', expecting `end'
+app/models/group.rb:5: syntax error, unexpected '{', expecting `end'
+app/models/group.rb:5: syntax error, unexpected '}', expecting `end'
+app/controllers/groups_controller.rb:17:in `new'
+Started GET "/groups/new" for 127.0.0.1 at 2023-09-23 21:15:01 +0200
+Processing by GroupsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.3ms | Allocations: 2238)
+
+
+  
+SyntaxError (/home/dieum/EVERYTING/WEB WORLD/MICROVERSE/PRACTICES/Module 5/Budget-app/app/models/group.rb:5: syntax error, unexpected '{', expecting `end'
+... :name, :icon, presence: true { message: "Icon link can't be...
+...                              ^
+/home/dieum/EVERYTING/WEB WORLD/MICROVERSE/PRACTICES/Module 5/Budget-app/app/models/group.rb:5: syntax error, unexpected '}', expecting `end'
+...e: "Icon link can't be blank" }
+...                              ^
+):
+  
+app/models/group.rb:5: syntax error, unexpected '{', expecting `end'
+app/models/group.rb:5: syntax error, unexpected '}', expecting `end'
+app/models/group.rb:5: syntax error, unexpected '{', expecting `end'
+app/models/group.rb:5: syntax error, unexpected '}', expecting `end'
+app/models/group.rb:5: syntax error, unexpected '{', expecting `end'
+app/models/group.rb:5: syntax error, unexpected '}', expecting `end'
+app/controllers/groups_controller.rb:17:in `new'
+Started GET "/groups/new" for 127.0.0.1 at 2023-09-23 21:15:54 +0200
+Processing by GroupsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 7.1ms | Allocations: 7572)
+
+
+  
+SyntaxError (/home/dieum/EVERYTING/WEB WORLD/MICROVERSE/PRACTICES/Module 5/Budget-app/app/models/group.rb:6: syntax error, unexpected '{', expecting `end'
+...lidates :icon, presence: true { message: "Icon link can't be...
+...                              ^
+/home/dieum/EVERYTING/WEB WORLD/MICROVERSE/PRACTICES/Module 5/Budget-app/app/models/group.rb:6: syntax error, unexpected '}', expecting `end'
+...e: "Icon link can't be blank" }
+...                              ^
+):
+  
+app/models/group.rb:6: syntax error, unexpected '{', expecting `end'
+app/models/group.rb:6: syntax error, unexpected '}', expecting `end'
+app/models/group.rb:6: syntax error, unexpected '{', expecting `end'
+app/models/group.rb:6: syntax error, unexpected '}', expecting `end'
+app/models/group.rb:6: syntax error, unexpected '{', expecting `end'
+app/models/group.rb:6: syntax error, unexpected '}', expecting `end'
+app/controllers/groups_controller.rb:17:in `new'
+Started GET "/groups/new" for 127.0.0.1 at 2023-09-23 21:16:44 +0200
+Processing by GroupsController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1017)
+  Rendered layout layouts/application.html.erb (Duration: 18.7ms | Allocations: 17124)
+Completed 200 OK in 53ms (Views: 20.5ms | ActiveRecord: 6.8ms | Allocations: 32071)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2023-09-23 21:17:55 +0200
+Processing by GroupsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1011)
+  Rendered layout layouts/application.html.erb (Duration: 23.2ms | Allocations: 17022)
+Completed 200 OK in 60ms (Views: 25.8ms | ActiveRecord: 5.8ms | Allocations: 31902)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-09-23 21:17:58 +0200
+Processing by GroupsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Furniures", "icon"=>""}, "commit"=>"Create group"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1263)
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | Allocations: 3852)
+Completed 200 OK in 41ms (Views: 6.8ms | ActiveRecord: 0.8ms | Allocations: 12452)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-09-23 21:17:59 +0200
+Processing by GroupsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Furniures", "icon"=>""}, "commit"=>"Create group"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1042)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 3501)
+Completed 200 OK in 15ms (Views: 5.5ms | ActiveRecord: 0.9ms | Allocations: 7580)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-09-23 21:18:03 +0200
+Processing by GroupsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Furniures", "icon"=>""}, "commit"=>"Create group"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1043)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 3502)
+Completed 200 OK in 15ms (Views: 6.1ms | ActiveRecord: 0.9ms | Allocations: 7483)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-09-23 21:18:04 +0200
+Processing by GroupsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Furniures", "icon"=>""}, "commit"=>"Create group"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1043)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 3503)
+Completed 200 OK in 16ms (Views: 7.0ms | ActiveRecord: 1.0ms | Allocations: 7494)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-09-23 21:18:05 +0200
+Processing by GroupsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Furniures", "icon"=>""}, "commit"=>"Create group"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1042)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 3501)
+Completed 200 OK in 14ms (Views: 5.6ms | ActiveRecord: 0.8ms | Allocations: 7477)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-09-23 21:18:05 +0200
+Processing by GroupsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Furniures", "icon"=>""}, "commit"=>"Create group"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1042)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 3501)
+Completed 200 OK in 14ms (Views: 5.9ms | ActiveRecord: 0.8ms | Allocations: 7479)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-09-23 21:18:05 +0200
+Processing by GroupsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Furniures", "icon"=>""}, "commit"=>"Create group"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1043)
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | Allocations: 3502)
+Completed 200 OK in 13ms (Views: 5.3ms | ActiveRecord: 0.7ms | Allocations: 7491)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-09-23 21:18:05 +0200
+Processing by GroupsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Furniures", "icon"=>""}, "commit"=>"Create group"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1042)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 3501)
+Completed 200 OK in 17ms (Views: 6.7ms | ActiveRecord: 0.8ms | Allocations: 7485)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-09-23 21:18:06 +0200
+Processing by GroupsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Furniures", "icon"=>""}, "commit"=>"Create group"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1042)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 3507)
+Completed 200 OK in 14ms (Views: 5.6ms | ActiveRecord: 0.7ms | Allocations: 7478)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-09-23 21:18:06 +0200
+Processing by GroupsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Furniures", "icon"=>""}, "commit"=>"Create group"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1042)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | Allocations: 3507)
+Completed 200 OK in 14ms (Views: 5.4ms | ActiveRecord: 0.8ms | Allocations: 7481)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-09-23 21:18:06 +0200
+Processing by GroupsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Furniures", "icon"=>""}, "commit"=>"Create group"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1042)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 3502)
+Completed 200 OK in 15ms (Views: 6.6ms | ActiveRecord: 0.8ms | Allocations: 7474)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-09-23 21:18:07 +0200
+Processing by GroupsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Furniures", "icon"=>""}, "commit"=>"Create group"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1042)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 3501)
+Completed 200 OK in 16ms (Views: 6.1ms | ActiveRecord: 0.8ms | Allocations: 7481)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-09-23 21:18:07 +0200
+Processing by GroupsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Furniures", "icon"=>""}, "commit"=>"Create group"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1042)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 3501)
+Completed 200 OK in 15ms (Views: 6.1ms | ActiveRecord: 0.8ms | Allocations: 7481)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-09-23 21:18:08 +0200
+Processing by GroupsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Furniures", "icon"=>""}, "commit"=>"Create group"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1042)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 3501)
+Completed 200 OK in 15ms (Views: 6.0ms | ActiveRecord: 0.9ms | Allocations: 7473)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-09-23 21:18:08 +0200
+Processing by GroupsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Furniures", "icon"=>""}, "commit"=>"Create group"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 1042)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 3501)
+Completed 200 OK in 14ms (Views: 5.5ms | ActiveRecord: 0.7ms | Allocations: 7469)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-09-23 21:18:08 +0200
+Processing by GroupsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Furniures", "icon"=>""}, "commit"=>"Create group"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1042)
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | Allocations: 3501)
+Completed 200 OK in 18ms (Views: 6.8ms | ActiveRecord: 0.9ms | Allocations: 7481)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-09-23 21:18:09 +0200
+Processing by GroupsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Furniures", "icon"=>""}, "commit"=>"Create group"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 1042)
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | Allocations: 3501)
+Completed 200 OK in 14ms (Views: 6.8ms | ActiveRecord: 0.7ms | Allocations: 7485)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-09-23 21:18:09 +0200
+Processing by GroupsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Furniures", "icon"=>""}, "commit"=>"Create group"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1042)
+  Rendered layout layouts/application.html.erb (Duration: 5.0ms | Allocations: 3501)
+Completed 200 OK in 14ms (Views: 5.6ms | ActiveRecord: 0.6ms | Allocations: 7475)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-09-23 21:18:09 +0200
+Processing by GroupsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Furniures", "icon"=>""}, "commit"=>"Create group"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1042)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 3501)
+Completed 200 OK in 15ms (Views: 6.7ms | ActiveRecord: 0.8ms | Allocations: 7467)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-09-23 21:18:10 +0200
+Processing by GroupsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Furniures", "icon"=>""}, "commit"=>"Create group"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1042)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 3501)
+Completed 200 OK in 15ms (Views: 6.0ms | ActiveRecord: 0.7ms | Allocations: 7479)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-09-23 21:18:10 +0200
+Processing by GroupsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Furniures", "icon"=>""}, "commit"=>"Create group"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1042)
+  Rendered layout layouts/application.html.erb (Duration: 7.0ms | Allocations: 3501)
+Completed 200 OK in 16ms (Views: 7.8ms | ActiveRecord: 0.7ms | Allocations: 7469)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-09-23 21:18:10 +0200
+Processing by GroupsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Furniures", "icon"=>""}, "commit"=>"Create group"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1042)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 3501)
+Completed 200 OK in 16ms (Views: 6.6ms | ActiveRecord: 0.6ms | Allocations: 7473)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-09-23 21:18:10 +0200
+Processing by GroupsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Furniures", "icon"=>""}, "commit"=>"Create group"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1042)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 3501)
+Completed 200 OK in 16ms (Views: 5.9ms | ActiveRecord: 1.0ms | Allocations: 7481)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-09-23 21:18:11 +0200
+Processing by GroupsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Furniures", "icon"=>""}, "commit"=>"Create group"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1042)
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | Allocations: 3501)
+Completed 200 OK in 16ms (Views: 6.8ms | ActiveRecord: 0.9ms | Allocations: 7483)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-09-23 21:18:11 +0200
+Processing by GroupsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Furniures", "icon"=>""}, "commit"=>"Create group"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1064)
+  Rendered layout layouts/application.html.erb (Duration: 8.2ms | Allocations: 3536)
+Completed 200 OK in 24ms (Views: 9.2ms | ActiveRecord: 1.1ms | Allocations: 7506)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-09-23 21:18:11 +0200
+Processing by GroupsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Furniures", "icon"=>""}, "commit"=>"Create group"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1042)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 3501)
+Completed 200 OK in 16ms (Views: 7.5ms | ActiveRecord: 0.8ms | Allocations: 7485)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-09-23 21:18:11 +0200
+Processing by GroupsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Furniures", "icon"=>""}, "commit"=>"Create group"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1042)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 3501)
+Completed 200 OK in 14ms (Views: 6.2ms | ActiveRecord: 0.6ms | Allocations: 7473)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-09-23 21:18:12 +0200
+Processing by GroupsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Furniures", "icon"=>""}, "commit"=>"Create group"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1042)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 3501)
+Completed 200 OK in 15ms (Views: 6.0ms | ActiveRecord: 0.7ms | Allocations: 7467)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-09-23 21:18:12 +0200
+Processing by GroupsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Furniures", "icon"=>""}, "commit"=>"Create group"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1042)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 3501)
+Completed 200 OK in 14ms (Views: 6.3ms | ActiveRecord: 0.6ms | Allocations: 7489)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-09-23 21:18:12 +0200
+Processing by GroupsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Furniures", "icon"=>""}, "commit"=>"Create group"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1042)
+  Rendered layout layouts/application.html.erb (Duration: 5.9ms | Allocations: 3501)
+Completed 200 OK in 14ms (Views: 6.6ms | ActiveRecord: 0.6ms | Allocations: 7485)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-09-23 21:18:12 +0200
+Processing by GroupsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Furniures", "icon"=>""}, "commit"=>"Create group"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1042)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 3501)
+Completed 200 OK in 13ms (Views: 5.5ms | ActiveRecord: 0.7ms | Allocations: 7471)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-09-23 21:18:12 +0200
+Processing by GroupsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Furniures", "icon"=>""}, "commit"=>"Create group"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1042)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 3501)
+Completed 200 OK in 23ms (Views: 8.8ms | ActiveRecord: 2.0ms | Allocations: 7475)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-09-23 21:18:13 +0200
+Processing by GroupsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Furniures", "icon"=>""}, "commit"=>"Create group"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1042)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 3507)
+Completed 200 OK in 15ms (Views: 5.5ms | ActiveRecord: 0.8ms | Allocations: 7476)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-09-23 21:18:13 +0200
+Processing by GroupsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Furniures", "icon"=>""}, "commit"=>"Create group"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1042)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 3507)
+Completed 200 OK in 14ms (Views: 5.9ms | ActiveRecord: 0.7ms | Allocations: 7477)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-09-23 21:18:13 +0200
+Processing by GroupsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Furniures", "icon"=>""}, "commit"=>"Create group"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1042)
+  Rendered layout layouts/application.html.erb (Duration: 9.0ms | Allocations: 3502)
+Completed 200 OK in 23ms (Views: 9.9ms | ActiveRecord: 1.1ms | Allocations: 7486)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-09-23 21:18:13 +0200
+Processing by GroupsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Furniures", "icon"=>""}, "commit"=>"Create group"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1042)
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | Allocations: 3501)
+Completed 200 OK in 14ms (Views: 6.1ms | ActiveRecord: 0.7ms | Allocations: 7489)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-09-23 21:18:13 +0200
+Processing by GroupsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Furniures", "icon"=>""}, "commit"=>"Create group"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 1042)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | Allocations: 3501)
+Completed 200 OK in 14ms (Views: 5.4ms | ActiveRecord: 0.7ms | Allocations: 7473)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-09-23 21:18:14 +0200
+Processing by GroupsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Furniures", "icon"=>""}, "commit"=>"Create group"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1042)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 3501)
+Completed 200 OK in 16ms (Views: 7.0ms | ActiveRecord: 0.7ms | Allocations: 7477)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-09-23 21:18:14 +0200
+Processing by GroupsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Furniures", "icon"=>""}, "commit"=>"Create group"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1042)
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | Allocations: 3501)
+Completed 200 OK in 14ms (Views: 5.9ms | ActiveRecord: 0.7ms | Allocations: 7473)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-09-23 21:18:14 +0200
+Processing by GroupsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Furniures", "icon"=>""}, "commit"=>"Create group"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1042)
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | Allocations: 3501)
+Completed 200 OK in 15ms (Views: 5.8ms | ActiveRecord: 0.8ms | Allocations: 7479)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2023-09-23 21:20:44 +0200
+Processing by GroupsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1011)
+  Rendered layout layouts/application.html.erb (Duration: 15.9ms | Allocations: 17022)
+Completed 200 OK in 45ms (Views: 18.0ms | ActiveRecord: 9.5ms | Allocations: 29624)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-09-23 21:20:47 +0200
+Processing by GroupsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Furniures", "icon"=>""}, "commit"=>"Create group"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.9ms | Allocations: 7654)
+
+
+  
+ActionView::MissingTemplate (Missing template groups/message, application/message with {:locale=>[:en], :formats=>[:turbo_stream, :html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}.
+
+Searched in:
+  * "/home/dieum/EVERYTING/WEB WORLD/MICROVERSE/PRACTICES/Module 5/Budget-app/app/views"
+  * "/var/lib/gems/3.0.0/gems/devise-4.9.2/app/views"
+  * "/var/lib/gems/3.0.0/gems/turbo-rails-1.4.0/app/views"
+  * "/var/lib/gems/3.0.0/gems/actiontext-7.0.7.2/app/views"
+  * "/var/lib/gems/3.0.0/gems/actionmailbox-7.0.7.2/app/views"
+
+Did you mean?  groups/new
+               groups/show
+               groups/index
+               layouts/mailer
+               devise/mailer/email_changed
+               layouts/turbo_rails/frame):
+  
+app/controllers/groups_controller.rb:27:in `create'
+Started GET "/groups/new" for 127.0.0.1 at 2023-09-23 21:23:43 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GroupsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 27.5ms | Allocations: 1764)
+  Rendered layout layouts/application.html.erb (Duration: 83.0ms | Allocations: 39743)
+Completed 200 OK in 167ms (Views: 86.1ms | ActiveRecord: 8.1ms | Allocations: 87725)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-09-23 21:23:46 +0200
+Processing by GroupsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Furniures", "icon"=>""}, "commit"=>"Create group"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1363)
+  Rendered layout layouts/application.html.erb (Duration: 5.9ms | Allocations: 3921)
+Completed 200 OK in 194ms (Views: 6.6ms | ActiveRecord: 0.9ms | Allocations: 12693)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-09-23 21:23:47 +0200
+Processing by GroupsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Furniures", "icon"=>""}, "commit"=>"Create group"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1043)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 3494)
+Completed 200 OK in 15ms (Views: 6.4ms | ActiveRecord: 1.1ms | Allocations: 7632)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-09-23 21:23:48 +0200
+Processing by GroupsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Furniures", "icon"=>""}, "commit"=>"Create group"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1042)
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | Allocations: 3492)
+Completed 200 OK in 16ms (Views: 7.1ms | ActiveRecord: 0.9ms | Allocations: 7494)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-09-23 21:23:48 +0200
+Processing by GroupsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Furniures", "icon"=>""}, "commit"=>"Create group"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1042)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 3492)
+Completed 200 OK in 14ms (Views: 5.6ms | ActiveRecord: 0.9ms | Allocations: 7512)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-09-23 21:23:48 +0200
+Processing by GroupsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Furniures", "icon"=>""}, "commit"=>"Create group"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 1042)
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | Allocations: 3492)
+Completed 200 OK in 17ms (Views: 5.7ms | ActiveRecord: 1.0ms | Allocations: 7508)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-09-23 21:23:48 +0200
+Processing by GroupsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Furniures", "icon"=>""}, "commit"=>"Create group"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1043)
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | Allocations: 3494)
+Completed 200 OK in 19ms (Views: 9.9ms | ActiveRecord: 0.8ms | Allocations: 7525)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-09-23 21:23:49 +0200
+Processing by GroupsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Furniures", "icon"=>""}, "commit"=>"Create group"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1042)
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | Allocations: 3492)
+Completed 200 OK in 16ms (Views: 7.2ms | ActiveRecord: 0.8ms | Allocations: 7504)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-09-23 21:23:49 +0200
+Processing by GroupsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Furniures", "icon"=>""}, "commit"=>"Create group"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1043)
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | Allocations: 3494)
+Completed 200 OK in 15ms (Views: 6.0ms | ActiveRecord: 0.7ms | Allocations: 7531)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2023-09-23 21:26:14 +0200
+Processing by GroupsController#new as HTML
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 969)
+  Rendered layout layouts/application.html.erb (Duration: 10.7ms | Allocations: 3839)
+Completed 200 OK in 25ms (Views: 12.4ms | ActiveRecord: 2.3ms | Allocations: 6268)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2023-09-23 21:26:23 +0200
+Processing by GroupsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 4.1ms | Allocations: 473)
+  Rendered layout layouts/application.html.erb (Duration: 10.6ms | Allocations: 2872)
+Completed 200 OK in 28ms (Views: 15.0ms | ActiveRecord: 0.4ms | Allocations: 4557)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2023-09-23 21:26:50 +0200
+Processing by GroupsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 2.3ms | Allocations: 989)
+  Rendered layout layouts/application.html.erb (Duration: 16.7ms | Allocations: 17079)
+Completed 200 OK in 54ms (Views: 18.9ms | ActiveRecord: 10.0ms | Allocations: 32348)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-09-23 21:26:54 +0200
+Processing by GroupsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Furniures", "icon"=>""}, "commit"=>"Create group"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1108)
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | Allocations: 3678)
+Completed 200 OK in 37ms (Views: 6.2ms | ActiveRecord: 1.1ms | Allocations: 12425)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-09-23 21:26:54 +0200
+Processing by GroupsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Furniures", "icon"=>""}, "commit"=>"Create group"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 5.2ms | Allocations: 789)
+  Rendered layout layouts/application.html.erb (Duration: 12.0ms | Allocations: 3240)
+Completed 200 OK in 31ms (Views: 13.3ms | ActiveRecord: 1.9ms | Allocations: 7382)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2023-09-23 21:27:01 +0200
+Processing by GroupsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 0.9ms | Allocations: 474)
+  Rendered layout layouts/application.html.erb (Duration: 4.6ms | Allocations: 2874)
+Completed 200 OK in 11ms (Views: 5.3ms | ActiveRecord: 0.4ms | Allocations: 4389)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2023-09-23 21:27:09 +0200
+Processing by GroupsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 0.8ms | Allocations: 469)
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | Allocations: 2869)
+Completed 200 OK in 13ms (Views: 4.9ms | ActiveRecord: 0.4ms | Allocations: 4377)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-09-23 21:27:11 +0200
+Processing by GroupsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Furniures", "icon"=>""}, "commit"=>"Create group"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 788)
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | Allocations: 3238)
+Completed 200 OK in 13ms (Views: 5.0ms | ActiveRecord: 0.9ms | Allocations: 7237)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-09-23 21:27:12 +0200
+Processing by GroupsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Furniures", "icon"=>""}, "commit"=>"Create group"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 789)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 3239)
+Completed 200 OK in 15ms (Views: 6.3ms | ActiveRecord: 0.8ms | Allocations: 7246)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-09-23 21:27:12 +0200
+Processing by GroupsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Furniures", "icon"=>""}, "commit"=>"Create group"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 788)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | Allocations: 3238)
+Completed 200 OK in 13ms (Views: 5.5ms | ActiveRecord: 0.7ms | Allocations: 7234)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-09-23 21:27:12 +0200
+Processing by GroupsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Furniures", "icon"=>""}, "commit"=>"Create group"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 788)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | Allocations: 3238)
+Completed 200 OK in 13ms (Views: 5.6ms | ActiveRecord: 0.8ms | Allocations: 7240)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-09-23 21:27:20 +0200
+Processing by GroupsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Furniures", "icon"=>""}, "commit"=>"Create group"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 788)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 3238)
+Completed 200 OK in 15ms (Views: 6.0ms | ActiveRecord: 0.9ms | Allocations: 7248)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-09-23 21:27:20 +0200
+Processing by GroupsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Furniures", "icon"=>""}, "commit"=>"Create group"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 789)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | Allocations: 3239)
+Completed 200 OK in 13ms (Views: 5.1ms | ActiveRecord: 0.6ms | Allocations: 7244)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2023-09-23 21:27:23 +0200
+Processing by GroupsController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 3.3ms | Allocations: 474)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 2874)
+Completed 200 OK in 16ms (Views: 9.5ms | ActiveRecord: 0.7ms | Allocations: 4375)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-09-23 21:27:30 +0200
+Processing by GroupsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Furniures", "icon"=>""}, "commit"=>"Create group"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 788)
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | Allocations: 3238)
+Completed 200 OK in 13ms (Views: 5.0ms | ActiveRecord: 0.7ms | Allocations: 7227)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-09-23 21:27:31 +0200
+Processing by GroupsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Furniures", "icon"=>""}, "commit"=>"Create group"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 788)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 3238)
+Completed 200 OK in 17ms (Views: 6.8ms | ActiveRecord: 0.9ms | Allocations: 7250)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2023-09-23 21:27:33 +0200
+Processing by GroupsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 474)
+  Rendered layout layouts/application.html.erb (Duration: 14.0ms | Allocations: 2874)
+Completed 200 OK in 25ms (Views: 15.1ms | ActiveRecord: 0.5ms | Allocations: 4373)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2023-09-23 21:27:34 +0200
+Processing by GroupsController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 469)
+  Rendered layout layouts/application.html.erb (Duration: 12.8ms | Allocations: 2868)
+Completed 200 OK in 22ms (Views: 13.8ms | ActiveRecord: 0.6ms | Allocations: 4362)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-09-23 21:27:36 +0200
+Processing by GroupsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Furniures", "icon"=>""}, "commit"=>"Create group"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 2.0ms | Allocations: 789)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 3239)
+Completed 200 OK in 16ms (Views: 6.9ms | ActiveRecord: 0.8ms | Allocations: 7236)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2023-09-23 21:27:37 +0200
+Processing by GroupsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 474)
+  Rendered layout layouts/application.html.erb (Duration: 13.1ms | Allocations: 2874)
+Completed 200 OK in 23ms (Views: 14.2ms | ActiveRecord: 0.4ms | Allocations: 4387)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2023-09-23 21:29:43 +0200
+Processing by GroupsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 3.2ms | Allocations: 991)
+  Rendered layout layouts/application.html.erb (Duration: 7.6ms | Allocations: 3877)
+Completed 200 OK in 15ms (Views: 9.6ms | ActiveRecord: 0.3ms | Allocations: 6274)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-09-23 21:29:46 +0200
+Processing by GroupsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Furniures", "icon"=>""}, "commit"=>"Create group"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1289)
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | Allocations: 3739)
+Completed 200 OK in 15ms (Views: 5.9ms | ActiveRecord: 0.7ms | Allocations: 8018)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-09-23 21:29:47 +0200
+Processing by GroupsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Furniures", "icon"=>""}, "commit"=>"Create group"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1236)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 3686)
+Completed 200 OK in 15ms (Views: 6.0ms | ActiveRecord: 0.9ms | Allocations: 7689)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-09-23 21:29:47 +0200
+Processing by GroupsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Furniures", "icon"=>""}, "commit"=>"Create group"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1236)
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | Allocations: 3688)
+Completed 200 OK in 14ms (Views: 5.5ms | ActiveRecord: 0.8ms | Allocations: 7696)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-09-23 21:29:47 +0200
+Processing by GroupsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Furniures", "icon"=>""}, "commit"=>"Create group"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1236)
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | Allocations: 3691)
+Completed 200 OK in 14ms (Views: 5.7ms | ActiveRecord: 0.7ms | Allocations: 7696)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2023-09-23 21:29:48 +0200
+Processing by GroupsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 458)
+  Rendered layout layouts/application.html.erb (Duration: 8.2ms | Allocations: 2875)
+Completed 200 OK in 14ms (Views: 9.6ms | ActiveRecord: 0.3ms | Allocations: 4389)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2023-09-23 21:32:52 +0200
+Processing by GroupsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 25.0ms | Allocations: 983)
+  Rendered layout layouts/application.html.erb (Duration: 35.7ms | Allocations: 3885)
+Completed 200 OK in 67ms (Views: 41.9ms | ActiveRecord: 8.7ms | Allocations: 9264)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-09-23 21:32:55 +0200
+Processing by GroupsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Furniures", "icon"=>""}, "commit"=>"Create group"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1298)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | Allocations: 3748)
+Completed 200 OK in 17ms (Views: 6.4ms | ActiveRecord: 0.8ms | Allocations: 8041)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-09-23 21:32:56 +0200
+Processing by GroupsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Furniures", "icon"=>""}, "commit"=>"Create group"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1236)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 3686)
+Completed 200 OK in 14ms (Views: 5.5ms | ActiveRecord: 0.8ms | Allocations: 7692)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-09-23 21:32:56 +0200
+Processing by GroupsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Furniures", "icon"=>""}, "commit"=>"Create group"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1236)
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | Allocations: 3686)
+Completed 200 OK in 14ms (Views: 5.6ms | ActiveRecord: 1.1ms | Allocations: 7686)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-09-23 21:32:57 +0200
+Processing by GroupsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Furniures", "icon"=>""}, "commit"=>"Create group"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1236)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | Allocations: 3686)
+Completed 200 OK in 14ms (Views: 5.4ms | ActiveRecord: 0.9ms | Allocations: 7698)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2023-09-23 21:32:58 +0200
+Processing by GroupsController#new as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 458)
+  Rendered layout layouts/application.html.erb (Duration: 11.2ms | Allocations: 2869)
+Completed 200 OK in 24ms (Views: 12.6ms | ActiveRecord: 1.0ms | Allocations: 4381)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2023-09-23 21:33:08 +0200
+Processing by GroupsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 4.0ms | Allocations: 979)
+  Rendered layout layouts/application.html.erb (Duration: 14.2ms | Allocations: 3865)
+Completed 200 OK in 26ms (Views: 17.5ms | ActiveRecord: 0.5ms | Allocations: 6249)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-09-23 21:33:10 +0200
+Processing by GroupsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Furniures", "icon"=>""}, "commit"=>"Create group"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1275)
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | Allocations: 3725)
+Completed 200 OK in 20ms (Views: 8.9ms | ActiveRecord: 0.9ms | Allocations: 8010)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-09-23 21:33:11 +0200
+Processing by GroupsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Furniures", "icon"=>""}, "commit"=>"Create group"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1236)
+  Rendered layout layouts/application.html.erb (Duration: 7.0ms | Allocations: 3686)
+Completed 200 OK in 17ms (Views: 7.7ms | ActiveRecord: 1.0ms | Allocations: 7711)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-09-23 21:33:11 +0200
+Processing by GroupsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Furniures", "icon"=>""}, "commit"=>"Create group"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1236)
+  Rendered layout layouts/application.html.erb (Duration: 10.4ms | Allocations: 3686)
+Completed 200 OK in 30ms (Views: 11.9ms | ActiveRecord: 2.1ms | Allocations: 7696)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-09-23 21:33:11 +0200
+Processing by GroupsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Furniures", "icon"=>""}, "commit"=>"Create group"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1236)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 3692)
+Completed 200 OK in 15ms (Views: 6.2ms | ActiveRecord: 0.7ms | Allocations: 7695)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2023-09-23 21:33:11 +0200
+Processing by GroupsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 3.0ms | Allocations: 458)
+  Rendered layout layouts/application.html.erb (Duration: 9.5ms | Allocations: 2875)
+Completed 200 OK in 19ms (Views: 11.0ms | ActiveRecord: 0.5ms | Allocations: 4390)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2023-09-23 21:35:48 +0200
+Processing by GroupsController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1231)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 4124)
+Completed 200 OK in 52ms (Views: 9.7ms | ActiveRecord: 10.6ms | Allocations: 9554)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2023-09-23 21:35:54 +0200
+Processing by GroupsController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 2.3ms | Allocations: 549)
+  Rendered layout layouts/application.html.erb (Duration: 10.1ms | Allocations: 2958)
+Completed 200 OK in 19ms (Views: 11.5ms | ActiveRecord: 0.6ms | Allocations: 4640)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2023-09-23 21:35:58 +0200
+Processing by GroupsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 549)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 2958)
+Completed 200 OK in 17ms (Views: 9.1ms | ActiveRecord: 0.3ms | Allocations: 4462)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2023-09-23 21:36:06 +0200
+Processing by GroupsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 5.6ms | Allocations: 872)
+  Rendered layout layouts/application.html.erb (Duration: 11.1ms | Allocations: 3758)
+Completed 200 OK in 19ms (Views: 12.9ms | ActiveRecord: 0.5ms | Allocations: 6144)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-09-23 21:36:08 +0200
+Processing by GroupsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Furniures", "icon"=>""}, "commit"=>"Create group"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 840)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 3290)
+Completed 200 OK in 16ms (Views: 6.4ms | ActiveRecord: 0.9ms | Allocations: 7583)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2023-09-23 21:36:09 +0200
+Processing by GroupsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 2.7ms | Allocations: 455)
+  Rendered layout layouts/application.html.erb (Duration: 10.0ms | Allocations: 2867)
+Completed 200 OK in 17ms (Views: 12.2ms | ActiveRecord: 0.3ms | Allocations: 4386)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2023-09-23 21:36:46 +0200
+Processing by GroupsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 599)
+  Rendered layout layouts/application.html.erb (Duration: 16.8ms | Allocations: 16423)
+Completed 200 OK in 46ms (Views: 18.1ms | ActiveRecord: 10.1ms | Allocations: 28711)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-09-23 21:36:48 +0200
+Processing by GroupsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Furniures", "icon"=>""}, "commit"=>"Create group"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/groups_controller.rb:24:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 2.7ms | Allocations: 968)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 3418)
+Completed 200 OK in 21ms (Views: 8.8ms | ActiveRecord: 1.3ms | Allocations: 9028)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2023-09-23 21:36:49 +0200
+Processing by GroupsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 455)
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | Allocations: 2867)
+Completed 200 OK in 12ms (Views: 9.0ms | ActiveRecord: 0.2ms | Allocations: 4371)
+
+
