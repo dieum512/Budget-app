@@ -4,7 +4,7 @@ class Group < ApplicationRecord
 
   validates :icon, presence: true
 
-  validates :name, presence: { message: 'Name must not be blank'}
-  validates :icon, presence: { message: 'Name must not be blank'}
+  validates :name, presence: { message: 'Name must not be blank' }
+  validates :icon, presence: { message: 'Name must not be blank' }
   validates :icon, format: { with: %r{\Ahttps?://[^\s]+\z}, message: 'must be a valid URL' }
 end
