@@ -3,5 +3,5 @@ class Group < ApplicationRecord
   has_many :entities
 
   validates :name, :icon, presence: true
-  validates :icon, format: { with: /\Ahttps?:\/\/[^\s]+\z/, message: "must be a valid URL" }
+  validates :icon, format: { with: %r{\Ahttps?://[^\s]+\z}, message: 'must be a valid URL' }
 end
