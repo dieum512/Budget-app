@@ -7,8 +7,8 @@ Rails.application.routes.draw do
   root 'groups#index'
 
   resources :groups, only: [:index, :show, :new, :create] do
-    resources :entities, only: [:index]
+    resources :entities, only: [ :new, :create]
   end
 
-  resources :entities, only: [:new, :create]
+  
 end
