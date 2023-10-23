@@ -1,0 +1,336 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;1,300&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  list-style: none;
+}
+
+/* groups index */
+.groups-container {
+  background: #f0f2f1;
+  padding-top: 50px;
+}
+
+.groups-container-grid {
+  padding: 3% 5%;
+  display: grid;
+  gap: 15px;
+}
+
+.single-group-container {
+  width: 100%;
+  background: #fff;
+
+  /* display: flex; */
+  padding: 10px;
+}
+
+.single-group-container:last-child {
+  margin-bottom: 100px;
+}
+
+.single-group-container-flex {
+  display: flex;
+  gap: 10px;
+}
+
+.group-image {
+  width: 40%;
+}
+
+.group-image img {
+  width: 100%;
+  border-radius: 3px;
+}
+
+.group-info-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.group-info-container .group-title {
+  font-size: 18px;
+  font-weight: 500;
+  color: #86898e;
+}
+
+.title-date-container p {
+  padding-top: 15px;
+  color: #989da3;
+}
+
+.group-entity {
+  color: #424b54;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.add-group-container {
+  background: #60b524;
+  padding: 20px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.add-group-container h5 {
+  width: 100%;
+  text-align: center;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.add-group-container h5 .add-group-btn {
+  color: #fff;
+}
+
+.navbar i {
+  font-size: 28px;
+  color: #fff;
+}
+
+/* group show & crate group */
+.title-cont,
+.create-group-nav {
+  background: #3778c2;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.login-header i {
+  font-size: 28px;
+  color: #fff;
+}
+
+.title-cont a i,
+.create-group-nav a i {
+  font-size: 28px;
+  color: #fff;
+}
+
+.title-cont h2,
+.create-group-nav h2 {
+  width: 100%;
+  text-align: center;
+  font-size: 25px;
+  color: #fff;
+  font-weight: 500;
+}
+
+.show-group-cont {
+  background: #f0f2f1;
+  height: 100vh;
+}
+
+.show-group-cont-single {
+  padding: 3% 5%;
+}
+
+.show-group-cont-single-2 {
+  padding: 10px;
+  background: #fff;
+}
+
+.group-header {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #f0f2f1;
+}
+
+.group-header img {
+  width: 40%;
+}
+
+.group-header h5 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #424b54;
+}
+
+.transaction-list-cont {
+  padding-top: 10px;
+}
+
+.transac .transaction-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #424b54;
+}
+
+.transac .transaction-time {
+  font-size: 18px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #f0f2f1;
+  color: #86898e;
+}
+
+.amount {
+  font-size: 20px;
+  padding-top: 10px;
+  font-weight: bold;
+  color: #424b54;
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+}
+
+.scan-butn {
+  display: flex;
+  align-items: center;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  position: fixed;
+  justify-content: center;
+  background: #60b524;
+}
+
+/* splash */
+.splash-cont {
+  background: #f0f2f1;
+  width: 100%;
+  height: 100vh;
+  padding: 75% 5% 5% 5%;
+  position: relative;
+}
+
+.splash-cont h1 {
+  text-align: center;
+  font-weight: bold;
+  font-style: italic;
+  color: #424b54;
+}
+
+.devise-btns {
+  width: 90%;
+  position: absolute;
+  bottom: 2.5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.login-btn {
+  background: #3778c2;
+  width: 100%;
+  padding: 20px;
+  border-radius: 5px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.sign-up-btn {
+  width: 100%;
+  padding: 15px;
+  color: #989da3;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+/* log in */
+.login-header {
+  background: #3778c2;
+  padding: 10px 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.login-header h2 {
+  font-size: 28px;
+  color: #fff;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.login-header .log-in-btn-2 {
+  border: none;
+  background: transparent;
+  color: #fff;
+  font-size: 18px;
+}
+
+.field-cont {
+  background: #f0f2f1;
+  padding: 5% 0;
+  height: 100vh;
+}
+
+.field {
+  width: 100%;
+}
+
+.field .input {
+  width: 100%;
+  padding: 13px;
+  background: #fff;
+  font-size: 16px;
+  border: none;
+  border-bottom: 2px solid #f0f2f1;
+}
+
+/* navvar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #3778c2;
+  padding: 10px 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.navbar .log-out {
+  border: none;
+  background: transparent;
+  color: #fff;
+  font-size: 18px;
+}
+
+/* forms */
+.create-btn {
+  border: none;
+  background: #60b524;
+  color: #fff;
+  padding: 10px 25px;
+  margin-top: 20px;
+  float: right;
+  font-size: 16px;
+}
+
+.create-btn.create {
+  margin-right: 5%;
+}
+
+/* new trransaction form */
+.transaction-form-cont {
+  padding: 5%;
+}
+
+.input-cont {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+}

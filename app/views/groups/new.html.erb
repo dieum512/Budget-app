@@ -1,0 +1,29 @@
+<div class="create-group-nav">
+  <a href="<%= groups_path %>">
+    <i class="fa-solid fa-arrow-left"></i>
+  </a>
+  <h2>Create a new group</h2>
+</div>
+<div class="container-fluid w-100 d-flex flex-column align-items-center mt-5">
+  <%= form_with model: @group, url: groups_path, method: :post, :html => {:class => "w-75 mt-4"} do |form| %>
+  <div class="field-cont">
+    <div class="field">
+      <%= form.text_field :name, class:"input", placeholder:"Name" %>
+    </div>
+    <div class="field">
+      <%= form.text_field :icon, class:"input", placeholder:"Icon link" %>
+    </div>
+
+    <% if @group.errors.any? %>
+        <div class="alert alert-danger">
+          <% @group.errors.full_messages.each do |message| %>
+            <span><%= message %></span>
+          <% end %>
+        </div>
+      <% end %>
+    
+      <p class="notice"><%= alert %></p>
+     <%= form.submit 'Create group', class: "create-btn create" %>
+  </div>
+  <% end %>
+</div>

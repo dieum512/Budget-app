@@ -1,0 +1,32 @@
+<% if current_user %>
+<%= render partial: "shared/nav" %>
+<div class="groups-container">
+  <div class="groups-container-grid">
+    <% unless @groups.empty? %>
+      <% @groups.each do |group| %>
+        <div class="single-group-container">
+          <div class="single-group-container-flex">
+            <div class="group-image">
+              <img src=<%= group.icon %> alt="group icon">
+            </div>
+            <div class="group-info-container">
+              <div class="title-date-container">
+                <%= link_to "#{group.name}", group_path(group), class:"group-title" %>
+                <p><%=group.created_at.strftime("%d %b %Y")%></p>
+              </div> 
+              <p class="group-entity"> $ <%= group.entities.sum(:amount) %></p>
+            </div>
+          </div>  
+        </div>  
+      <% end %>
+    <% else %>
+      <h3 class="no-category">You don't have any categories yet.</h3>
+    <% end %>
+  </div>
+  <div class="add-group-container"> 
+    <h5><%= link_to 'ADD A NEW GROUP', new_group_path, class: "add-group-btn" %></h5>
+  </div>
+<% else %>
+  <%= render partial: "shared/splash" %>
+<% end %>
+</div>
